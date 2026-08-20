@@ -360,7 +360,7 @@ The build backlog for this repo, in order of return.
 |---|---|---|---|
 | 1 | ~~**Fix payment drop-off**~~ — **SHIPPED 19 Aug** | Turned out not to be drop-off. See the incident note below | Hours |
 | 2 | ~~**Founders' dashboard**~~ — **SHIPPED 19 Aug** | Live at `/ops` on getluckygolf.co.za | Days |
-| 3 | **Indwe lead-quality report** | Automated weekly pack for the renewal. Turns the status call into evidence | Days |
+| 3 | ~~**Indwe lead-quality report**~~ — **SHIPPED 20 Aug** | Live at `/ops/indwe`. See the finding below | Days |
 | 4 | **Membership growth funnel** | 48 → 250. Automated onboarding, WhatsApp opt-in flow, win-back on failed recurring payments (there's a failed collection running daily right now that nobody chases) | Days |
 | 5 | **App v1 PWA** | §3 scope | Weeks |
 | 6 | **Ace claim & verification workflow** | Currently manual and undefined with ops gone. It's also the moment of maximum brand risk | Days |
@@ -407,6 +407,35 @@ entry reference, which is why this ran silent for three weeks — worth ten
 minutes in PayFast → Settings → Notifications. Both the 26 stuck entries and the
 missed membership records need reconciling against PayFast's transaction list
 for 26 July onward.
+
+### Finding, 20 August 2026 — the Indwe feed is bigger and thinner than we thought
+
+Building the lead-quality report corrected two things.
+
+**We deliver more than we thought.** 874 leads across the window, not 584. The
+KPI shipped the day before counted only the `leads` table and omitted paid
+entries and vouchers, which the feed tags General Lead and does send. The true
+average across complete months is **267**, not 146. Both surfaces now read one
+definition of a lead, so they cannot drift apart again.
+
+**But the tier that matters has collapsed.** Quote-Ready leads — explicit
+insurance intent, a risk review or a broker switch, the only tier Indwe can
+really convert — went **91 in June to 1 in July to 0 in August.** They are
+event-driven and the events stopped. Total volume holding up while Quote-Ready
+goes to zero is a worse renewal story than lower volume with intent intact, and
+it is better raised by us than by them.
+
+**And a third of rows repeat an email already in the feed** — the same golfer
+entering more than once, which is good for us and noise for Indwe's dialler.
+Worth agreeing whether they want it de-duplicated before it becomes their
+complaint.
+
+**The half we still do not have is conversion.** How many were contacted, quoted,
+bound, and what premium they wrote. Only Indwe holds it, we have never asked,
+and the page asks for it rather than estimating a proxy. If a Quote-Ready lead
+converts materially better than a General one, the renewal stops being about how
+many golfers we reach and becomes about how many policies we originate — a much
+better argument, and the one that tells us what to build next.
 
 **Two lessons worth keeping.** A health check that does not measure money is not
 a health check. And never let a hardcoded list of someone else's infrastructure
