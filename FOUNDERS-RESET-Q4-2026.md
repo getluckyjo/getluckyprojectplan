@@ -368,6 +368,44 @@ The build backlog for this repo, in order of return.
 
 Items 1–4 are all achievable before the PGA Show.
 
+### Incident, 19–20 August 2026 — payments were not being recorded
+
+What looked like a 17% checkout drop-off was a broken pipeline, and it was
+happening on **both** money paths at once.
+
+**Entries (getluckygolf.co.za).** Every PayFast ITN since late July was rejected
+on a signature the site could no longer reproduce, logged to a console warning
+nobody read, and answered 400. The last entry to reach `paid` was **31 July**;
+33 attempts stalled behind it, of which **26 were real golfers worth ~R4,500**.
+
+**Memberships (membership.getluckygolfclub.com).** Every PayFast webhook was
+answered **403** against a hardcoded list of 37 IP addresses PayFast had grown
+past. Members kept paying — the R149 confirmations arrived daily — while no
+member or payment row was written. It also had no server-side postback at all,
+so that stale list and the signature were its only guards.
+
+Nothing in either codebase changed. There was no deploy to the entry site
+between 10 July and 13 August. The change was on PayFast's side, in the same
+window as their "Payfast by Network" rebrand. The daily canary stayed green
+throughout, because it only checked that env vars existed and that a hash still
+computed — it never asked whether any money had arrived.
+
+**Shipped, both live:** source IP is DNS-resolved and fail-open; signature
+verification is advisory, multi-variant, and alerts rather than rejects;
+PayFast's own server-side postback is the authority on whether a notification is
+genuine; every previously-silent failure path sends an ops alert; and the canary
+now fails when entries are created but none is marked paid.
+
+**Still open:** there has never been a PayFast "You received" email for a `GLE-`
+entry reference, which is why this ran silent for three weeks — worth ten
+minutes in PayFast → Settings → Notifications. Both the 26 stuck entries and the
+missed membership records need reconciling against PayFast's transaction list
+for 26 July onward.
+
+**Two lessons worth keeping.** A health check that does not measure money is not
+a health check. And never let a hardcoded list of someone else's infrastructure
+decide whether a paying customer gets recorded.
+
 ---
 
 ## 10. The three decisions to leave the session with
