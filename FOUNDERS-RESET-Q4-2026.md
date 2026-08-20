@@ -393,8 +393,14 @@ computed — it never asked whether any money had arrived.
 **Shipped, both live:** source IP is DNS-resolved and fail-open; signature
 verification is advisory, multi-variant, and alerts rather than rejects;
 PayFast's own server-side postback is the authority on whether a notification is
-genuine; every previously-silent failure path sends an ops alert; and the canary
-now fails when entries are created but none is marked paid.
+genuine; and every previously-silent failure path sends an ops alert.
+
+**Both canaries now watch money rather than reachability.** The entry canary
+fails when entries are created and none is marked paid. The membership canary
+fails when no completed payment lands in 7 days while active members exist, and
+when 3 or more active recurring members have no payment recorded in 40 days —
+the second catching the slower failure where some members keep billing and
+others silently stop.
 
 **Still open:** there has never been a PayFast "You received" email for a `GLE-`
 entry reference, which is why this ran silent for three weeks — worth ten
