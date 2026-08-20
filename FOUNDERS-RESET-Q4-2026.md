@@ -358,8 +358,8 @@ The build backlog for this repo, in order of return.
 
 | # | Build | Why | Effort |
 |---|---|---|---|
-| 1 | **Fix payment drop-off** | 17% of paying intent lost at checkout. Highest return per hour of anything here | Hours |
-| 2 | **Founders' dashboard** | The ten KPIs on one page, live from PayFast, Postgres and the submissions sheet. Ends manual reporting | Days |
+| 1 | ~~**Fix payment drop-off**~~ — **SHIPPED 19 Aug** | Turned out not to be drop-off. See the incident note below | Hours |
+| 2 | ~~**Founders' dashboard**~~ — **SHIPPED 19 Aug** | Live at `/ops` on getluckygolf.co.za | Days |
 | 3 | **Indwe lead-quality report** | Automated weekly pack for the renewal. Turns the status call into evidence | Days |
 | 4 | **Membership growth funnel** | 48 → 250. Automated onboarding, WhatsApp opt-in flow, win-back on failed recurring payments (there's a failed collection running daily right now that nobody chases) | Days |
 | 5 | **App v1 PWA** | §3 scope | Weeks |
