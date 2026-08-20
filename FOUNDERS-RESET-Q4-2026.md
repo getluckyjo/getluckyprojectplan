@@ -361,7 +361,7 @@ The build backlog for this repo, in order of return.
 | 1 | ~~**Fix payment drop-off**~~ — **SHIPPED 19 Aug** | Turned out not to be drop-off. See the incident note below | Hours |
 | 2 | ~~**Founders' dashboard**~~ — **SHIPPED 19 Aug** | Live at `/ops` on getluckygolf.co.za | Days |
 | 3 | ~~**Indwe lead-quality report**~~ — **SHIPPED 20 Aug** | Live at `/ops/indwe`. See the finding below | Days |
-| 4 | **Membership growth funnel** | 48 → 250. Automated onboarding, WhatsApp opt-in flow, win-back on failed recurring payments (there's a failed collection running daily right now that nobody chases) | Days |
+| 4 | ~~**Membership growth funnel**~~ — **SHIPPED 20 Aug** | Live at `/ops/membership`. See the finding below | Days |
 | 5 | **App v1 PWA** | §3 scope | Weeks |
 | 6 | **Ace claim & verification workflow** | Currently manual and undefined with ops gone. It's also the moment of maximum brand risk | Days |
 | 7 | **Course estate monitor** | Camera health across 25 installs, so we find out before a club does | Days |
@@ -436,6 +436,39 @@ and the page asks for it rather than estimating a proxy. If a Quote-Ready lead
 converts materially better than a General one, the renewal stops being about how
 many golfers we reach and becomes about how many policies we originate — a much
 better argument, and the one that tells us what to build next.
+
+### Finding, 20 August 2026 — membership cannot reach 250 on the list we hold
+
+The funnel was built to answer whether the golfers we already have can get us
+from 48 members to 250. They cannot, and the constraint is not reach.
+
+**Consent is the binding constraint.** Of 542 unique golfers who gave us their
+details, **40 declined outright and 402 were never asked** — the entry forms did
+not ask until 13 August. That leaves roughly **100 we may lawfully invite.** At a
+generous 20% conversion that is 20 new members: 48 to about 68, against a target
+of 250.
+
+**And the queue is narrower than its size suggests.** 65% of it played Wild Coast
+and 89% were last seen in June — it is largely one activation's list, ten weeks
+old, not a broad consented base. A reason to invite them soon while they still
+remember playing, and a reason not to read 100 as steady-state demand.
+
+**Failed payments are not the leak.** Only three distinct members failed a
+recurring payment in ninety days, one of them Andrew. PayFast retries daily for
+about three days and then stops. Worth chasing, worth a few hundred rand a month,
+not worth calling a growth strategy.
+
+**What this changes.** Working the list is worth doing and will not close the gap.
+The gap closes on new acquisition with consent captured at the point of entry —
+which makes the **PGA Show (18–21 September, 1,000 leads targeted)** the single
+most important membership event of the quarter rather than a branding exercise.
+The consent question now on the entry forms is what stops those 1,000 leads
+becoming 1,000 more unaddressable rows.
+
+**Nothing sends itself.** The page builds a consent-gated queue and exports it;
+it does not mail anyone. Inviting real golfers is an outward-facing action
+against a patchy historical consent record, so it stays a decision rather than a
+cron.
 
 **Two lessons worth keeping.** A health check that does not measure money is not
 a health check. And never let a hardcoded list of someone else's infrastructure
