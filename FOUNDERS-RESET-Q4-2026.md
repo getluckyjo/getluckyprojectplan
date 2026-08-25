@@ -339,11 +339,23 @@ From the handover pack, these become founder tasks or they stop happening.
 | **HG camera MTN SIMs** | On hold — supplier won't continue until an invoice is paid |
 | **Supplier payments** | Was due 21 Aug, still in progress |
 | **St Francis footage retrieval** | Outstanding — matters if there's a claim |
+| **PBYP strategy doc and sales scripts** | Unfinished, and it's the sales material behind Andrew's 40 golf days. Either it gets finished before the 4th or that KPI starts from nothing |
+| **File and folder ownership** | Twelve Drive sheets, folders and a Notion directory sit under an account that closes on the 4th. Transfer ownership, don't just take copies |
 
 **Ongoing, needs an owner or needs to stop:**
-Camera maintenance across 25 installs · promoter network and outstanding
-commissions · PBYP distribution to clubs · membership tag printing and shipping ·
-the club tracker, promo calendar, payments sheet and membership tracker.
+Camera maintenance across 25 installs, including the Johannesburg Central job
+(Jaco, in the Installs Group, is the contact) · promoter network and outstanding
+commissions · PBYP distribution to clubs, the Cape Town deliveries and the PC
+allocated for PBYP integration · membership tag printing and shipping · the club
+tracker, promo calendar, payments sheet and membership tracker.
+
+**The twelve assets to take ownership of before 4 September:** club tracker · SA
+club database · sales leads · promoter directory (Notion) · PBYP folder ·
+activations folder · promotions photos and videos · promo calendar · membership
+tracker · payments sheet · invoices folder · storage stock take. Links are in the
+handover pack. Most will be dead weight within a quarter, but the club database,
+the sales leads and the membership tracker feed directly into the digital channel
+and are not recoverable once the account goes.
 
 **Recommendation:** don't reassign this list — shrink it. Most of it exists to
 support physical activations we're no longer running. Decide what the 25 installed
