@@ -330,24 +330,39 @@ needs a plan in this session, not in September.
 ## 8. The 4 September cliff
 
 From the handover pack, these become founder tasks or they stop happening.
+Status below is from the handover tracker as at 19 August — where the tracker and
+the handover document disagree, the tracker is newer and wins.
 
 **Urgent, needs a decision this week:**
 
-| Item | Decision |
-|---|---|
-| **Stock in storage** | Storesmart is vacated 31 Aug and there's no decision on where stock goes. Full stock take not started. **This is the most time-critical item in the handover.** |
-| **HG camera MTN SIMs** | On hold — supplier won't continue until an invoice is paid |
-| **Supplier payments** | Was due 21 Aug, still in progress |
-| **St Francis footage retrieval** | Outstanding — matters if there's a claim |
-| **PBYP strategy doc and sales scripts** | Unfinished, and it's the sales material behind Andrew's 40 golf days. Either it gets finished before the 4th or that KPI starts from nothing |
-| **File and folder ownership** | Twelve Drive sheets, folders and a Notion directory sit under an account that closes on the 4th. Transfer ownership, don't just take copies |
+| Item | Tracker status | Decision |
+|---|---|---|
+| **Stock in storage** | Awaiting Decision | Storesmart is vacated 31 Aug and there's no decision on where stock goes. **This is the most time-critical item in the handover.** |
+| **Final stock take** | Not Started | Urgent, ten days out, and the storage decision can't sensibly be made without it |
+| **Outstanding financial matters** | Not Started | Broader than the supplier run — promoter commissions, expenses, deposits, refunds. Nobody has opened it |
+| **Supplier payments** | In Progress | Was due 21 Aug, now overdue. Also the blocker on the camera SIMs |
+| **HG camera MTN SIMs** | On Hold | Supplier won't continue until that invoice is paid |
+| **File and folder ownership** | In Progress | Twelve Drive sheets, folders and a Notion directory sit under an account that closes on the 4th. Transfer ownership, don't just take copies |
+
+**Further along than the handover document suggests:** the PBYP strategy document
+and sales scripts are **complete** — that's the sales material behind Andrew's 40
+golf days, and it's done. Asset print items collected. St Francis footage is with
+the retrieval company. PBYP boxes are packed for the club shipments and the Cape
+Town deliveries are ready to go. These need a courier and a recipient, not a plan.
 
 **Ongoing, needs an owner or needs to stop:**
 Camera maintenance across 25 installs, including the Johannesburg Central job
 (Jaco, in the Installs Group, is the contact) · promoter network and outstanding
-commissions · PBYP distribution to clubs, the Cape Town deliveries and the PC
-allocated for PBYP integration · membership tag printing and shipping · the club
+commissions · the last mile on the PBYP shipments and Cape Town deliveries ·
+golf bag tag collection · membership tag printing and shipping · the club
 tracker, promo calendar, payments sheet and membership tracker.
+
+**Two gaps in the tracker itself.** It has no Responsible Person column, even
+though its own instructions say to assign one to every task continuing past
+4 September — so all fourteen rows are unowned by construction, which is the
+§1 problem in miniature. And the PC allocated for PBYP integration appears in the
+handover document's priority list but has no tracker row at all, so it is the one
+asset nobody is tracking.
 
 **The twelve assets to take ownership of before 4 September:** club tracker · SA
 club database · sales leads · promoter directory (Notion) · PBYP folder ·
