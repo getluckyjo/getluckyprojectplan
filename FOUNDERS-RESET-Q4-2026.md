@@ -229,8 +229,9 @@ One owner, one number, one date. All measurable from systems we already have.
 | # | KPI | Baseline | Target | By | Owner |
 |---|---|---|---|---|---|
 | 1 | Indwe 2027 renewal | R2.5m yr 1 | **Signed, R3.0m** | 30 Nov | Andrew |
-| 2 | Leads to Indwe / month | 146 avg | **250** | 31 Oct | Andrew |
-| 3 | Entry payment completion | 83% | **95%** | 15 Sep | Johannes |
+| 2 | Leads to Indwe / month | 267 avg | **250** | 31 Oct | Andrew |
+| 2b | Quote-Ready leads / month | 0 | **agree with Indwe** | 30 Sep | Andrew |
+| 3 | Entry payment completion | re-measure | **95%** | 15 Sep | Johannes |
 | 4 | Digital entry revenue / month | R7,300 | **R30,000** | 31 Dec | Johannes |
 | 5 | Paid members | 48 | **250** | 31 Dec | Johannes |
 | 6 | Golf days booked (PBYP) | — | **40 confirmed** | 31 Dec | Andrew |
@@ -239,8 +240,14 @@ One owner, one number, one date. All measurable from systems we already have.
 | 9 | App v1 live | — | **Shipped** | 31 Oct | Johannes |
 | 10 | PGA Show leads captured | — | **1,000** | 21 Sep | Andrew |
 
-KPI 3 is the cheapest win on the list. KPI 1 is the one that keeps the company
-alive. Everything else is secondary to those two.
+KPI 1 is the one that keeps the company alive. Everything else is secondary.
+
+Three rows moved after the findings below. **KPI 2 rebaselines from 146 to 267**
+once paid entries and vouchers are counted — we are already past the target, so
+volume is the wrong number to chase and Quote-Ready intent (2b) replaces it.
+**KPI 3 cannot be baselined until September data lands**, because the 83% figure
+was an artefact of the payment incident, not golfers abandoning checkout. And
+**KPI 5 is not reachable** from the list we hold — see the membership finding.
 
 **The ownership rule to agree:** if a number is yours and it's going to miss, you
 say so at the Monday check-in — not at the deadline.
