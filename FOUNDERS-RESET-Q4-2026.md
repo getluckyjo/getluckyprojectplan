@@ -18,7 +18,7 @@ actually earns money from today.
 | Revenue line | Monthly, actual | Share |
 |---|---:|---:|
 | **Indwe / Santam sponsorship** (contracted) | **~R208,000** | **~93%** |
-| Website paid entries (May–Aug actual) | ~R7,300 | ~3% |
+| Website paid entries (May–Aug **recorded**; a floor — see §9) | ~R7,300 | ~3% |
 | Membership (48 subs × R149) | ~R7,200 | ~3% |
 | Zapper on-course settlements | ~R500–1,000 | <1% |
 
@@ -231,7 +231,7 @@ One owner, one number, one date. All measurable from systems we already have.
 | 1 | Indwe 2027 renewal | R2.5m yr 1 | **Signed, R3.0m** | 30 Nov | Andrew |
 | 2 | Leads to Indwe / month | 267 avg | **250** | 31 Oct | Andrew |
 | 2b | Quote-Ready leads / month | 0 | **agree with Indwe** | 30 Sep | Andrew |
-| 3 | Entry payment completion | re-measure | **95%** | 15 Sep | Johannes |
+| 3 | Entries reconciled to PayFast | 161 open | **0 open** | 15 Sep | Johannes |
 | 4 | Digital entry revenue / month | R7,300 | **R30,000** | 31 Dec | Johannes |
 | 5 | Paid members | 48 | **250** | 31 Dec | Johannes |
 | 6 | Golf days booked (PBYP) | — | **40 confirmed** | 31 Dec | Andrew |
@@ -245,8 +245,9 @@ KPI 1 is the one that keeps the company alive. Everything else is secondary.
 Three rows moved after the findings below. **KPI 2 rebaselines from 146 to 267**
 once paid entries and vouchers are counted — we are already past the target, so
 volume is the wrong number to chase and Quote-Ready intent (2b) replaces it.
-**KPI 3 cannot be baselined until September data lands**, because the 83% figure
-was an artefact of the payment incident, not golfers abandoning checkout. And
+**KPI 3 is replaced.** "Entry payment completion, 83% → 95%" measured nothing:
+entry is not gated on the callback, so there is no checkout for a golfer to
+abandon. The real job is clearing the 161 unreconciled rows. And
 **KPI 5 is not reachable** from the list we hold — see the membership finding.
 
 **The ownership rule to agree:** if a number is yours and it's going to miss, you
@@ -409,8 +410,15 @@ happening on **both** money paths at once.
 
 **Entries (getluckygolf.co.za).** Every PayFast ITN since late July was rejected
 on a signature the site could no longer reproduce, logged to a console warning
-nobody read, and answered 400. The last entry to reach `paid` was **31 July**;
-33 attempts stalled behind it, of which **26 were real golfers worth ~R4,500**.
+nobody read, and answered 400. The last entry the system marked `paid` was
+**31 July**.
+
+**The golfers paid.** Entry is deliberately not gated on the callback — the swing
+is issued on submission and the ITN only flips the record afterwards, because
+making confirmation a prerequisite costs conversion at the tee. So the money
+reached PayFast on every one of these and the row was simply never updated.
+`pending` means unreconciled, not unpaid: nothing needs re-charging and no golfer
+is owed an entry.
 
 **Memberships (membership.getluckygolfclub.com).** Every PayFast webhook was
 answered **403** against a hardcoded list of 37 IP addresses PayFast had grown
@@ -436,11 +444,18 @@ when 3 or more active recurring members have no payment recorded in 40 days —
 the second catching the slower failure where some members keep billing and
 others silently stop.
 
+**What that changes.** The health check reports **161 entries still pending** —
+all-time, not just the incident window. Under the flow above, every one of them
+is revenue already collected and never counted. At the R50–R100 that dominates
+the tier mix that is roughly **R8,000–R16,000 unrecorded**, against a digital
+line we report at R7,300/month. The reconciliation is an exercise in finding
+money, not in chasing golfers, and it is the fastest correction available to the
+revenue table in §0.
+
 **Still open:** there has never been a PayFast "You received" email for a `GLE-`
-entry reference, which is why this ran silent for three weeks — worth ten
-minutes in PayFast → Settings → Notifications. Both the 26 stuck entries and the
-missed membership records need reconciling against PayFast's transaction list
-for 26 July onward.
+entry reference — only for `GLG-` membership subscriptions. That is why this ran
+silent for three weeks, and it is ten minutes in PayFast → Settings →
+Notifications. The membership records still need reconciling too.
 
 ### Finding, 20 August 2026 — the Indwe feed is bigger and thinner than we thought
 
